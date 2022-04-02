@@ -8,7 +8,7 @@ Para testar o projeto, siga os passos descritos abaixo
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone https://github.com/diegosampaio/api_plan.git
+git clone https://github.com/diegosampaio/GPPlan_backend.git
 ```
 
 ```sh
@@ -52,37 +52,64 @@ php artisan migrate
 Acesse o projeto
 [http://localhost:8000](http://localhost:8000)
 
-Endpoints
+
+### Endpoints
 
 [GET] /api/users
+
 Lista todos os usuários cadastrados no Banco de Dados
 
+
 [POST] /api/users
+
 Realiza o cadastro de um usuário, devem ser informados os seguintes paramêtros:
+
 types:
+
   Users:
+
     type: object
+
     properties:
+
       name: string
+
       email: string
+
       phone: string
+
       password: string
+
       photo: file
 
+
 [GET] /api/users/{idUser}
+
 Lista dados cadastrados de um determinado usuário.
 
 [PUT] /api/users/{idUser}
+
 Realiza a atualização de cadastro de um determinado usuário, podem ser atualizados os seguintes paramêtros:
+
 types:
+
   Users:
+
     type: object
+
     properties:
+
       name: string
+
       email: string
+
       phone: string
+
       password: string
+
       photo: file
 
+
 [DELETE] /api/users/{idUser}
+
 Deleta um determinado usuário.
